@@ -1,0 +1,14 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SEPWS logo">
+  <defs>
+    <linearGradient id="sepwsG" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0e6fd6"/>
+      <stop offset="1" stop-color="#14c4e0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="44" height="44" rx="13" fill="url(#sepwsG)"/>
+  <!-- water droplet -->
+  <path d="M24 11c5.4 6.1 9 10.6 9 15.1A9 9 0 0 1 15 26.1C15 21.6 18.6 17.1 24 11Z" fill="#ffffff"/>
+  <path d="M20.4 26.4a3.6 3.6 0 0 0 3.6 3.6" stroke="#0e6fd6" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+  <!-- spray lines -->
+  <path d="M33 15.5l4.2-2.4M35 21l4.6-.7M31.2 11.6l2.6-3.6" stroke="#bff0f8" stroke-width="2" stroke-linecap="round"/>
+</svg>
