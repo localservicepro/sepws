@@ -116,8 +116,10 @@ p { color: var(--text); }
   height: var(--bh); padding: 0 1.5rem; border-radius: 100px;
   font-family: var(--font-head); font-weight: 600; font-size: 1rem;
   border: 1.5px solid transparent; cursor: pointer; white-space: nowrap;
+  -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent; line-height: 1;
   transition: transform .18s ease, box-shadow .25s ease, background .25s ease, color .2s ease;
 }
+input.btn { text-align: center; }
 .btn svg { width: 1.15em; height: 1.15em; }
 .btn--primary { background: var(--grad-brand); color: #fff; box-shadow: 0 10px 26px rgba(14,111,214,.34); }
 .btn--primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 16px 34px rgba(14,111,214,.42); }

@@ -75,11 +75,33 @@ The markup is intentionally Webflow-friendly:
 
 ---
 
+## 📈 Lead tracking & GHL (GoHighLevel / LeadConnector)
+
+- The **external tracking script** is installed on **every page**, just before `</body>`:
+  ```html
+  <script src="https://link.msgsndr.com/js/external-tracking.js" data-tracking-id="tk_7288af4112064712ab10a76614a99b9b"></script>
+  ```
+  This tracks **Page Views** and **Form Fills / Optins** across the site.
+- The **quote form** (`contact.html`) meets all GHL form-sync requirements: it's wrapped in `<form>`, includes an `<input type="email">`, uses a standard `<input type="submit">`, contains **no `<iframe>`**, and has **no JavaScript bound** to the submit event/button.
+- Form field **`name` attributes map directly to your GHL contact fields**:
+
+  | Form field | `name` | GHL field |
+  |-----------|--------|-----------|
+  | Full name | `name` | `{{contact.name}}` |
+  | Email (required) | `email` | `{{contact.email}}` |
+  | Phone | `phone` | `{{contact.phone}}` |
+  | Property address | `property_address` | `{{contact.property_address}}` |
+  | Service needed | `service_needed` | `{{contact.service_needed}}` |
+  | Job notes | `job_notes` | `{{contact.job_notes}}` |
+
+  > `property_address`, `service_needed` and `job_notes` are **custom fields** — make sure they exist in your GHL contact record with those exact field keys.
+- On submit, the form lands on **`thank-you.html`** (a branded confirmation page, `noindex`). The GHL script captures the submission on the native submit event. If your host blocks `GET` form navigation you can change the form's `method`/`action` — the field capture still works.
+
 ## ✅ Before you go live — client checklist
 
 1. **Testimonials** — the 3 homepage reviews are clearly-marked **placeholders**. Replace with genuine quotes from your Google Business Profile (see the HTML comment above the testimonials section).
 2. **Business facts** — confirm **opening hours** (currently Mon–Sat 7am–6pm), **"fully insured"** claim, and add your **ABN** if you'd like it displayed.
-3. **Contact form** — connect it to your preferred form handler so submissions reach `sepwsmelbourne@gmail.com`.
+3. **Contact form** — the GHL tracking script is installed and the form fields are mapped (see the *Lead tracking & GHL* section above). Confirm the custom fields `property_address`, `service_needed` and `job_notes` exist in GHL, then test one submission end-to-end.
 4. **Google Search Console** — verify the domain and submit `sitemap.xml`; request indexing on each new page.
 5. **NAP consistency** — make sure the address/phone match your Google Business Profile, Facebook and Instagram exactly.
 6. **Optional** — add suburb landing pages (Traralgon, Morwell, Warragul, Pakenham, Berwick, Mornington) as outlined in the strategy for more "service + suburb" ranking entry points.

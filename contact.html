@@ -98,7 +98,10 @@
         <h2 style="font-size:1.6rem">Request a free quote</h2>
         <p class="muted" style="margin-top:.5rem;margin-bottom:1.4rem">Fields marked <span style="color:#e0533b">*</span> are required.</p>
         <!-- Webflow-ready form: on import, connect this to Webflow Forms (or Formspree/Netlify). -->
-        <form name="quote" method="post" action="#" data-form="quote">
+        <!-- GHL-ready lead form: field names map to GoHighLevel contact fields.
+             Requirements met: wrapped in <form>, has <input type="email">, uses a
+             standard <input type="submit">, no <iframe>, and no JS bound to submit. -->
+        <form name="Quote Request" method="get" action="thank-you.html">
           <div class="form-row">
             <div class="field">
               <label for="name">Full name <span class="req">*</span></label>
@@ -109,19 +112,17 @@
               <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="0400 000 000" required>
             </div>
           </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com">
-            </div>
-            <div class="field">
-              <label for="suburb">Suburb <span class="req">*</span></label>
-              <input type="text" id="suburb" name="suburb" placeholder="Traralgon" required>
-            </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required>
           </div>
           <div class="field">
-            <label for="service">Service needed <span class="req">*</span></label>
-            <select id="service" name="service" required>
+            <label for="property_address">Property address <span class="req">*</span></label>
+            <input type="text" id="property_address" name="property_address" autocomplete="street-address" placeholder="e.g. 12 Example St, Traralgon VIC 3844" required>
+          </div>
+          <div class="field">
+            <label for="service_needed">Service needed <span class="req">*</span></label>
+            <select id="service_needed" name="service_needed" required>
               <option value="" selected disabled>Choose a service…</option>
               <option>Pressure Washing</option>
               <option>Concrete Sealing</option>
@@ -130,12 +131,10 @@
             </select>
           </div>
           <div class="field">
-            <label for="message">Tell us about the job</label>
-            <textarea id="message" name="message" placeholder="e.g. Driveway and front path pressure wash, exposed aggregate, approx. 60sqm."></textarea>
+            <label for="job_notes">Job notes</label>
+            <textarea id="job_notes" name="job_notes" placeholder="e.g. Driveway and front path pressure wash, exposed aggregate, approx. 60sqm."></textarea>
           </div>
-          <!-- honeypot (spam trap) -->
-          <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Do not fill<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
-          <button type="submit" class="btn btn--primary btn--lg btn--block">Send my request</button>
+          <input type="submit" class="btn btn--primary btn--lg btn--block" value="Send my request">
           <p class="form-note">Prefer to talk? Call <a href="tel:+61431221631">0431 221 631</a> or email <a href="mailto:sepwsmelbourne@gmail.com">sepwsmelbourne@gmail.com</a>.</p>
         </form>
       </div>
@@ -279,5 +278,7 @@
   <a href="contact.html" class="quote"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Free Quote</a>
 </div>
 <script src="js/main.js" defer></script>
+<!-- LeadConnector / GHL external tracking -->
+<script src="https://link.msgsndr.com/js/external-tracking.js" data-tracking-id="tk_7288af4112064712ab10a76614a99b9b"></script>
 </body>
 </html>
