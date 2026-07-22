@@ -29,6 +29,7 @@ Built from SEPWS's existing "South East" blue identity, elevated to a modern 202
 - Light tints `#eaf4fe` / `#f4f9ff`, success green `#16a34a`, review-star gold `#ffb020`
 - **Headings:** Sora (700/800) · **Body:** Inter — both via Google Fonts (Webflow-native)
 - Rounded 18px cards, soft shadows, gradient hero, wave/gradient accents
+- **Logo:** the "South East Pressure Washing Services" wordmark in the header/footer is recreated in **CSS** (chunky italic blue, `.wordmark` class) so it's crisp at any size and adapts to light/dark backgrounds. To use the exact raster logo instead, drop the file into `images/` and replace the `.wordmark` span with `<img src="images/your-logo.png" alt="South East Pressure Washing Services" class="brand__wordmark">` — happy to do this if you attach the file.
 
 > **Note on the Claude Design brand kit:** the supplied Claude Design homepage link
 > (`claude.ai/design/p/...`) requires the `/design-login` OAuth flow, which isn't available

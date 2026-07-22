@@ -149,6 +149,22 @@ input.btn { text-align: center; }
 .brand__name b { font-family: var(--font-head); font-weight: 800; color: var(--ink); font-size: 1.18rem; letter-spacing: -.02em; }
 .brand__name span { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
 
+/* South East wordmark logo (recreated in CSS to match brand) */
+.wordmark { display: inline-flex; flex-direction: column; line-height: .88; font-family: var(--font-head); font-style: italic; }
+.wordmark__top {
+  font-weight: 800; font-size: 1.66rem; letter-spacing: .003em; text-transform: uppercase; white-space: nowrap;
+  background: linear-gradient(177deg, #3a97f2 0%, #0b57ad 94%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.wordmark__sub { font-weight: 700; font-size: .6rem; letter-spacing: .142em; text-transform: uppercase; color: var(--brand-600); margin-top: 3px; padding-left: 2px; white-space: nowrap; }
+/* dark-background (footer) variant */
+.footer .wordmark__top { background: linear-gradient(177deg, #8ec8ff 0%, #2b8ff0 96%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.footer .wordmark__sub { color: #86b9ef; }
+@media (max-width: 400px){
+  .wordmark__top { font-size: 1.4rem; }
+  .wordmark__sub { font-size: .55rem; letter-spacing: .12em; }
+}
+
 .nav-links { display: flex; align-items: center; gap: .35rem; }
 .nav-links > li > a {
   display: inline-flex; align-items: center; gap: .3rem;
