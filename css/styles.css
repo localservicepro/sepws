@@ -186,8 +186,8 @@ input.btn { text-align: center; }
 
 .nav-links { display: flex; align-items: center; gap: .35rem; }
 .nav-links > li > a {
-  display: inline-flex; align-items: center; gap: .3rem;
-  padding: .55rem .8rem; border-radius: 100px; color: var(--ink);
+  display: inline-flex; align-items: center; gap: .3rem; white-space: nowrap;
+  padding: .55rem .7rem; border-radius: 100px; color: var(--ink);
   font-weight: 500; font-size: .98rem; transition: background .2s, color .2s;
 }
 .nav-links > li > a:hover, .nav-links > li > a[aria-current="page"] { background: var(--sky); color: var(--brand-700); }

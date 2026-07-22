@@ -29,8 +29,8 @@ Built from SEPWS's existing "South East" blue identity, elevated to a modern 202
 - Light tints `#eaf4fe` / `#f4f9ff`, success green `#16a34a`, review-star gold `#ffb020`
 - **Headings:** Sora (700/800) · **Body:** Inter — both via Google Fonts (Webflow-native)
 - Rounded 18px cards, soft shadows, gradient hero, wave/gradient accents
-- **Logo:** the header uses `images/sepws-logo.png` and the (dark) footer uses `images/sepws-logo-white.png` — high-res recreations of the "South East Pressure Washing Services" chrome-blue wordmark. If you have the original logo file, just drop it into `images/` and update the two `<img class="brand__img">` `src`s (header + footer) to swap it in.
-- **Header:** includes a top announcement bar (Servicing Latrobe Valley/Gippsland/South-East Melbourne · Open 7 days · 24hr emergency & call out · email), a centered nav, a click-to-call phone block, and a **Get Quote** button.
+- **Logo:** header and footer use `images/sepws-logo.png` — your **real** logo, sourced from `sepws+logos.webp` in the shared Google Drive folder and cropped to the clean two-line "South East Pressure Washing Services" wordmark (the phone-number band was removed since the header already shows a click-to-call number). The full original (with the phone band) is kept as `images/sepws-logo-full.png` if you ever want it. The transparent PNG reads on both the white header and the dark footer.
+- **Header:** clean sticky header — logo, nav (Home, Services ▾, Service Areas, About, Contact), a click-to-call phone link, and a **Get a Free Quote** button.
 
 > **Note on the Claude Design brand kit:** the supplied Claude Design homepage link
 > (`claude.ai/design/p/...`) requires the `/design-login` OAuth flow, which isn't available
